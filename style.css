@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.048),rgba(0, 0, 0, 0.11)), url(Images/bannerr.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.navbar{
+    width: 100%;
+    margin: 0px 0 0px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #00e1ff;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bolder;
+    transition: 0.5s ease;
+
+}
+.logo{
+    width: auto;
+    height: auto;
+    padding: 5px;
+    cursor: pointer;
+    margin: 15px;
+    animation: logorotate 100s linear infinite;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+@keyframes logorotate{
+    100%{
+        transform: rotate(3600deg);
+    }
+}
+.title{
+    left: 200px;
+    position: relative;
+    color: #ffffff;
+    margin-top: 8%;
+    width: 80%;
+}
+.title h1{
+    font-size: 4.3rem;
+    width: 50%;
+}
+.title h1 span{
+    color: #00e1ff;
+}
+.title h2{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.title p{
+    font-size: 1.4rem;
+    width: 45%;
+    word-spacing: 3px;
+    line-height: 30px;
+}
+.title p span{
+    color: #00e1ff;
+    font-style: italic;
+}
+.title button{
+    margin-top: 30px;
+    padding: 8px 14px 8px 14px;
+    border: 1px solid #00e1ff;
+    color: #00e1ff;
+    border-radius: 5px;
+    background: transparent;
+}
+.title button a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+}
+.title button:hover{
+    box-shadow: 0 0 5px #00e1ff,
+    0 0 25px #00e1ff,
+    0 0 50px #00e1ff,
+    0 0 100px #00e1ff;
+    background: #00e1ff;
+}
+.menu{
+    display: none;
+}
+.close{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:700px) {
+    .banner{
+        overflow: hidden;
+    }
+    .sub{
+        top: 0;
+        position: absolute;
+        right: 100%;
+        width: 100%;
+        height: 100vh;
+        background: #00e1ff;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .top{
+        margin-top: 40px;
+    }.navbar{
+        align-items: flex-start;
+    }
+    .navbar.active .sub{
+        right: 0%;
+    }
+    .navbar.active .close{
+        display: initial;
+        position: relative;
+        background: #ffffff;
+        padding: 4px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-bottom-left-radius: 10px;
+    }
+    .navbar ul li{
+        display: block;
+        margin: 0.4rem;
+    }
+    .navbar ul li a{
+        width: 90%;
+        display: block;
+        font-size: 1rem;
+        font-weight: bolder;
+        padding: 0.7rem;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        text-align: start;
+        background: linear-gradient(90deg,rgba(0, 255, 255, 0.582),rgba(255, 255, 255, 0.808));
+    }
+    .logo{
+        margin: 2px 0 0 10px;
+    }
+    .title{
+        margin-left: 20px;
+        position: static;
+        margin-top: 29%;
+    }
+    .title h1{
+        font-size: 3rem;
+        width: 100%;
+    }
+    .title h1 span{
+        font-size: 3.5rem;
+    }
+    .title h2{
+        font-size: 2rem;
+    }
+    .title p{
+        font-size: 1.4rem;
+        width: 80%;
+    }
+    .title p span{
+        color: #00e1ff;
+        font-style: italic;
+    }
+    .title button{
+        margin-top: 30px;
+        padding: 8px 14px 8px 14px;
+        border: 1px solid #00e1ff;
+        color: #00e1ff;
+        border-radius: 5px;
+        background: transparent;
+    }
+    .title button a{
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1rem;
+    }
+    .title button:hover{
+        box-shadow: 0 0 5px #00e1ff,
+        0 0 25px #00e1ff,
+        0 0 50px #00e1ff,
+        0 0 100px #00e1ff;
+        background: #00e1ff;
+    }
+    .menu{
+        display: initial;
+        margin: 15px;
+        margin-top: 30px;
+    }
+
+}
+
